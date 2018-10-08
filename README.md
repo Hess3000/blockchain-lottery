@@ -1,9 +1,11 @@
-Solidity message contract on an Ethereum Blockchain
+Ethereum contract using external test network using Infura
 
-Building an Ethereum based smart contract on a local Rinkeby test network from scratch without using Truffle.
+Building an Ethereum smart contract using external Rinkeby test network from scratch using Infura.
 
 Tools used:
 
 - Node
 - Web3.js
-- Gananche 
+- Gananche
+- Infura
+- Solidity
