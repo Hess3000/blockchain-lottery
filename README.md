@@ -1,4 +1,4 @@
-Ethereum contract using external test network using Infura
+Ethereum contract using external test network Infura
 
 Building an Ethereum smart contract using external Rinkeby test network from scratch using Infura.
 
