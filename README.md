@@ -9,3 +9,4 @@ Tools used:
 - Gananche
 - Infura
 - Solidity
+Blockchain lottery built on ethereum using solidity
