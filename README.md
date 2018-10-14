@@ -1,12 +1,11 @@
-Ethereum contract using external test network Infura
+Ethereum lottery contract.
 
-Building an Ethereum smart contract using external Rinkeby test network from scratch using Infura.
-
+Solidity smart contract built on Ethereum.
 Tools used:
 
 - Node
-- Web3.js
+- Web3
 - Gananche
 - Infura
 - Solidity
-Blockchain lottery built on ethereum using solidity
+
