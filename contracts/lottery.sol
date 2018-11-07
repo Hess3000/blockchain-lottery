@@ -3,6 +3,7 @@ pragma solidity ^0.4.17;
 contract Lottery {
     address public manager;
     address[] public players;
+    address public lastWinner;
     
     // constructor function prototype changed in newer versions of solidity
     function Lottery() {
@@ -21,6 +22,7 @@ contract Lottery {
     function pickWinner() public onlyManager {
         uint winner = random() % players.length;
         players[winner].transfer(this.balance);
+        lastWinner = players[winner];
         players = new address[](0);
     }
     

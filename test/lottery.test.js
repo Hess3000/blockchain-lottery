@@ -97,18 +97,21 @@ describe('Lottery contract', () => {
 		await lottery.methods.enter().send({
 			from: accounts[0],
 			value: web3.utils.toWei('2', 'ether')
-		})
-
+		});
+		
 		const balanceBefore = await web3.eth.getBalance(accounts[0]);
-
-		const pick = await lottery.methods.pickWinner().send({
+		await lottery.methods.pickWinner().send({
 			from: accounts[0]
 		});
-
 		const balanceAfter = await web3.eth.getBalance(accounts[0]);
-		
 		const difference = (balanceAfter - balanceBefore )
-		console.log(difference);
+		const players = await lottery.methods.getPlayers().call({
+			from: accounts[0]
+		});
+		const balance = await lottery.methods.bal().call();
+
+		assert(balance == 0 )
+		assert(players.length == 0)
 		assert( difference > web3.utils.toWei('1.8', 'ether'));
 	});
 
